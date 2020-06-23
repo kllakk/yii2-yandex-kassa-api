@@ -8,12 +8,12 @@
  *
  */
 
-namespace mikefinch\YandexKassaAPI\actions;
+namespace kllakk\YandexKassaAPI\actions;
 
-use mikefinch\YandexKassaAPI\YandexKassaAPI;
+use kllakk\YandexKassaAPI\YandexKassaAPI;
 use yii\base\Action;
 use yii\web\HttpException;
-use mikefinch\YandexKassaAPI\interfaces\OrderInterface;
+use kllakk\YandexKassaAPI\interfaces\OrderInterface;
 
 class CreatePaymentAction extends Action {
 

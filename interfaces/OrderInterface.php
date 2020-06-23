@@ -6,7 +6,7 @@
  * Time: 10:47
  */
 
-namespace mikefinch\YandexKassaAPI\interfaces;
+namespace kllakk\YandexKassaAPI\interfaces;
 
 use yii\db\ActiveRecordInterface;
 

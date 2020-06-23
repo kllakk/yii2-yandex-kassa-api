@@ -8,10 +8,10 @@
  *
  */
 
-namespace mikefinch\YandexKassaAPI\actions;
+namespace kllakk\YandexKassaAPI\actions;
 
-use mikefinch\YandexKassaAPI\interfaces\OrderInterface;
-use mikefinch\YandexKassaAPI\YandexKassaAPI;
+use kllakk\YandexKassaAPI\interfaces\OrderInterface;
+use kllakk\YandexKassaAPI\YandexKassaAPI;
 use yii\base\Action;
 use yii\web\HttpException;
 

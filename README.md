@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist mikefinch/yii2-yandex-kassa-api "*"
+php composer.phar require --prefer-dist kllakk/yii2-yandex-kassa-api "*"
 ```
 
 or add
 
 ```
-"mikefinch/yii2-yandex-kassa-api": "*"
+"kllakk/yii2-yandex-kassa-api": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -36,7 +36,7 @@ Once the extension is installed, you have to follow next few steps:
 'components' => [
     ...
     'kassa' => [
-        'class' => 'mikefinch\YandexKassaAPI\YandexKassaAPI',
+        'class' => 'kllakk\YandexKassaAPI\YandexKassaAPI',
         'returnUrl' => '',
         'shopId' => '',
         'key' => '',
@@ -87,14 +87,14 @@ class Orders extends Model implements OrderInterface {
  public function actions() {
         return [
             'create-payment' => [
-                'class'=>'mikefinch\YandexKassaAPI\actions\CreatePaymentAction',
+                'class'=>'kllakk\YandexKassaAPI\actions\CreatePaymentAction',
                 'orderClass' => Orders::className(),
                 'beforePayment' => function($order) {
                     return $order->status == Orders::STATUS_NEW;
                 }
             ],
             'notify' => [
-                'class'=>'mikefinch\YandexKassaAPI\actions\ConfirmPaymentAction',
+                'class'=>'kllakk\YandexKassaAPI\actions\ConfirmPaymentAction',
                 'orderClass' => Orders::className(),
                 'beforeConfirm' => function($payment, $order) {
                     $order->status = Orders::STATUS_PAID; 

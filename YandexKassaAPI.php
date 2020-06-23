@@ -1,9 +1,9 @@
 <?php
 
-namespace mikefinch\YandexKassaAPI;
+namespace kllakk\YandexKassaAPI;
 
 use YandexCheckout\Client;
-use mikefinch\YandexKassaAPI\interfaces\OrderInterface;
+use kllakk\YandexKassaAPI\interfaces\OrderInterface;
 use yii\base\Component;
 
 
