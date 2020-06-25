@@ -12,6 +12,7 @@ namespace kllakk\YandexKassaAPI\actions;
 
 use kllakk\YandexKassaAPI\interfaces\OrderInterface;
 use kllakk\YandexKassaAPI\YandexKassaAPI;
+use YandexCheckout\Model\PaymentStatus;
 use yii\base\Action;
 use yii\web\HttpException;
 
@@ -56,7 +57,9 @@ class ConfirmPaymentAction extends Action {
         }
 
         if ($this->beforeConfirm && call_user_func_array($this->beforeConfirm, [$request, $order])) {
-            $this->getComponent()->confirmPayment($request->object->id, $order);
+            if ($request->object->status == PaymentStatus::WAITING_FOR_CAPTURE) {
+                $this->getComponent()->confirmPayment($request->object->id, $order);
+            }
         }
     }
 
